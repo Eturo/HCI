@@ -1,0 +1,22 @@
+\\plutonium\undergrad\krahne3\profile\my documents\visual studio 2012\Projects\MovieApp\MovieApp\bin\Debug\MovieApp.exe.config
+\\plutonium\undergrad\krahne3\Profile\My Documents\Visual Studio 2012\Projects\MovieApp\MovieApp\bin\Debug\movies.xml
+\\plutonium\undergrad\krahne3\Profile\My Documents\Visual Studio 2012\Projects\MovieApp\MovieApp\bin\Debug\MovieApp.exe
+\\plutonium\undergrad\krahne3\Profile\My Documents\Visual Studio 2012\Projects\MovieApp\MovieApp\bin\Debug\MovieApp.pdb
+\\plutonium\undergrad\krahne3\Profile\My Documents\Visual Studio 2012\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.csprojResolveAssemblyReference.cache
+\\plutonium\undergrad\krahne3\Profile\My Documents\Visual Studio 2012\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.Form1.resources
+\\plutonium\undergrad\krahne3\Profile\My Documents\Visual Studio 2012\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.Properties.Resources.resources
+\\plutonium\undergrad\krahne3\Profile\My Documents\Visual Studio 2012\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.csproj.GenerateResource.Cache
+\\plutonium\undergrad\krahne3\Profile\My Documents\Visual Studio 2012\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.exe
+\\plutonium\undergrad\krahne3\Profile\My Documents\Visual Studio 2012\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.pdb
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\bin\Debug\MovieApp.exe.config
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.exe
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.pdb
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.csprojResolveAssemblyReference.cache
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.Form1.resources
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.Properties.Resources.resources
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.csproj.GenerateResource.Cache
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\bin\Debug\MovieApp.exe
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\bin\Debug\MovieApp.pdb
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.AdminPage.resources
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.AddEdit.resources
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\bin\Debug\Resources\movies.xml
