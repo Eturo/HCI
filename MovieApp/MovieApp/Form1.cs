@@ -24,9 +24,15 @@ namespace MovieApp {
 
             // Search(gets list of searchedMovies)
             List<Movie> allMovies = Util.getAllMovies();
-            string title = "B";//get from slider
-            string actor = "A";//get from slider
-            string director = "C";//get from slider
+
+            int titleVal = (trackBar1.Value+64);
+            string title = Convert.ToChar(titleVal).ToString();
+
+            int actorVal = trackBar2.Value+64;
+            string actor = Convert.ToChar(actorVal).ToString();
+            int directorVal = trackBar3.Value+64;
+
+            string director = Convert.ToChar(directorVal).ToString();
             List<string> cert = new List<string>(); //get from checkboxes
 
             List<Movie> titleSearch = Util.searchByTitle(allMovies, title);
