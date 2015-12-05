@@ -20,3 +20,42 @@ C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\bin\Debu
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.AdminPage.resources
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\obj\Debug\MovieApp.AddEdit.resources
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\MovieApp\MovieApp\bin\Debug\Resources\movies.xml
+C:\Users\Kev\Desktop\Assignment 3\MovieApp\MovieApp\bin\Debug\MovieApp.exe.config
+C:\Users\Kev\Desktop\Assignment 3\MovieApp\MovieApp\obj\Debug\MovieApp.exe
+C:\Users\Kev\Desktop\Assignment 3\MovieApp\MovieApp\obj\Debug\MovieApp.pdb
+C:\Users\Kev\Desktop\Assignment 3\MovieApp\MovieApp\obj\Debug\MovieApp.csprojResolveAssemblyReference.cache
+C:\Users\Kev\Desktop\Assignment 3\MovieApp\MovieApp\obj\Debug\MovieApp.AddEdit.resources
+C:\Users\Kev\Desktop\Assignment 3\MovieApp\MovieApp\obj\Debug\MovieApp.AdminPage.resources
+C:\Users\Kev\Desktop\Assignment 3\MovieApp\MovieApp\obj\Debug\MovieApp.Form1.resources
+C:\Users\Kev\Desktop\Assignment 3\MovieApp\MovieApp\obj\Debug\MovieApp.Properties.Resources.resources
+C:\Users\Kev\Desktop\Assignment 3\MovieApp\MovieApp\obj\Debug\MovieApp.csproj.GenerateResource.Cache
+C:\Users\Kev\Desktop\Assignment 3\MovieApp\MovieApp\bin\Debug\Resources\movies.xml
+C:\Users\Kev\Desktop\Assignment 3\MovieApp\MovieApp\bin\Debug\MovieApp.exe
+C:\Users\Kev\Desktop\Assignment 3\MovieApp\MovieApp\bin\Debug\MovieApp.pdb
+C:\Users\Kev\Desktop\Assignment 3(1.1)\MovieApp\MovieApp\bin\Debug\MovieApp.exe.config
+C:\Users\Kev\Desktop\Assignment 3(1.1)\MovieApp\MovieApp\obj\Debug\MovieApp.exe
+C:\Users\Kev\Desktop\Assignment 3(1.1)\MovieApp\MovieApp\obj\Debug\MovieApp.pdb
+C:\Users\Kev\Desktop\Assignment 3(1.1)\MovieApp\MovieApp\bin\Debug\Resources\movies.xml
+C:\Users\Kev\Desktop\Assignment 3(1.1)\MovieApp\MovieApp\bin\Debug\MovieApp.exe
+C:\Users\Kev\Desktop\Assignment 3(1.1)\MovieApp\MovieApp\bin\Debug\MovieApp.pdb
+C:\Users\Kev\Desktop\Assignment 3(1.1)\MovieApp\MovieApp\obj\Debug\MovieApp.csprojResolveAssemblyReference.cache
+C:\Users\Kev\Desktop\Assignment 3(1.1)\MovieApp\MovieApp\obj\Debug\MovieApp.AddEdit.resources
+C:\Users\Kev\Desktop\Assignment 3(1.1)\MovieApp\MovieApp\obj\Debug\MovieApp.AdminPage.resources
+C:\Users\Kev\Desktop\Assignment 3(1.1)\MovieApp\MovieApp\obj\Debug\MovieApp.Form1.resources
+C:\Users\Kev\Desktop\Assignment 3(1.1)\MovieApp\MovieApp\obj\Debug\MovieApp.Properties.Resources.resources
+C:\Users\Kev\Desktop\Assignment 3(1.1)\MovieApp\MovieApp\obj\Debug\MovieApp.csproj.GenerateResource.Cache
+C:\Users\Kev\Documents\GitHubVisualStudio\HCI-Kev\MovieApp\MovieApp\bin\Debug\MovieApp.exe.config
+C:\Users\Kev\Documents\GitHubVisualStudio\HCI-Kev\MovieApp\MovieApp\obj\Debug\MovieApp.exe
+C:\Users\Kev\Documents\GitHubVisualStudio\HCI-Kev\MovieApp\MovieApp\obj\Debug\MovieApp.pdb
+C:\Users\Kev\Documents\GitHubVisualStudio\HCI-Kev\MovieApp\MovieApp\bin\Debug\Resources\movies.xml
+C:\Users\Kev\Documents\GitHubVisualStudio\HCI-Kev\MovieApp\MovieApp\bin\Debug\MovieApp.exe
+C:\Users\Kev\Documents\GitHubVisualStudio\HCI-Kev\MovieApp\MovieApp\bin\Debug\MovieApp.pdb
+C:\Users\Kev\Documents\GitHubVisualStudio\HCI-Kev\MovieApp\MovieApp\obj\Debug\MovieApp.csprojResolveAssemblyReference.cache
+C:\Users\Kev\Documents\GitHubVisualStudio\HCI-Kev\MovieApp\MovieApp\obj\Debug\MovieApp.AddEdit.resources
+C:\Users\Kev\Documents\GitHubVisualStudio\HCI-Kev\MovieApp\MovieApp\obj\Debug\MovieApp.AdminPage.resources
+C:\Users\Kev\Documents\GitHubVisualStudio\HCI-Kev\MovieApp\MovieApp\obj\Debug\MovieApp.Form1.resources
+C:\Users\Kev\Documents\GitHubVisualStudio\HCI-Kev\MovieApp\MovieApp\obj\Debug\MovieApp.Properties.Resources.resources
+C:\Users\Kev\Documents\GitHubVisualStudio\HCI-Kev\MovieApp\MovieApp\obj\Debug\MovieApp.csproj.GenerateResource.Cache
+C:\Users\Kev\Source\Repos\HCI\MovieApp\MovieApp\bin\Debug\MovieApp.exe.config
+C:\Users\Kev\Source\Repos\HCI\MovieApp\MovieApp\obj\Debug\MovieApp.exe
+C:\Users\Kev\Source\Repos\HCI\MovieApp\MovieApp\obj\Debug\MovieApp.pdb
