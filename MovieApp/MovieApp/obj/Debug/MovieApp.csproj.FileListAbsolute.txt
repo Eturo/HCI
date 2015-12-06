@@ -59,3 +59,17 @@ C:\Users\Kev\Documents\GitHubVisualStudio\HCI-Kev\MovieApp\MovieApp\obj\Debug\Mo
 C:\Users\Kev\Source\Repos\HCI\MovieApp\MovieApp\bin\Debug\MovieApp.exe.config
 C:\Users\Kev\Source\Repos\HCI\MovieApp\MovieApp\obj\Debug\MovieApp.exe
 C:\Users\Kev\Source\Repos\HCI\MovieApp\MovieApp\obj\Debug\MovieApp.pdb
+C:\Users\Emilio\Documents\HCIRepo\MovieApp\MovieApp\bin\Debug\MovieApp.exe.config
+C:\Users\Emilio\Documents\HCIRepo\MovieApp\MovieApp\obj\Debug\MovieApp.exe
+C:\Users\Emilio\Documents\HCIRepo\MovieApp\MovieApp\obj\Debug\MovieApp.pdb
+C:\Users\Emilio\Documents\HCIRepo\MovieApp\MovieApp\bin\Debug\Resources\movies.xml
+C:\Users\Emilio\Documents\HCIRepo\MovieApp\MovieApp\bin\Debug\MovieApp.exe
+C:\Users\Emilio\Documents\HCIRepo\MovieApp\MovieApp\bin\Debug\MovieApp.pdb
+C:\Users\Emilio\Documents\HCIRepo\MovieApp\MovieApp\obj\Debug\MovieApp.csprojResolveAssemblyReference.cache
+C:\Users\Emilio\Documents\HCIRepo\MovieApp\MovieApp\obj\Debug\MovieApp.AddEdit.resources
+C:\Users\Emilio\Documents\HCIRepo\MovieApp\MovieApp\obj\Debug\MovieApp.AdminPage.resources
+C:\Users\Emilio\Documents\HCIRepo\MovieApp\MovieApp\obj\Debug\MovieApp.Form1.resources
+C:\Users\Emilio\Documents\HCIRepo\MovieApp\MovieApp\obj\Debug\MovieApp.Properties.Resources.resources
+C:\Users\Emilio\Documents\HCIRepo\MovieApp\MovieApp\obj\Debug\MovieApp.csproj.GenerateResource.Cache
+C:\Users\Emilio\Documents\HCIRepo\MovieApp\MovieApp\obj\Debug\MovieApp.MoviePage.resources
+C:\Users\Emilio\Documents\HCIRepo\MovieApp\MovieApp\obj\Debug\MovieApp.WatchList.resources

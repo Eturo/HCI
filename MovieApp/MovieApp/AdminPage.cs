@@ -62,6 +62,7 @@ namespace MovieApp {
         private void button3_Click(object sender, EventArgs e) {
             delete();
         }
+
         private void callEdit() {
             ae.edit(
                 listView1.SelectedItems[0].SubItems[0].Text,

@@ -19,7 +19,7 @@ namespace MovieApp {
             string rating = "";
             string length = "";
             string director = "";
-            int i = 0;
+
             while (reader.Read()) {
                 type = reader.NodeType;
                 if (type == XmlNodeType.Element) {
@@ -72,7 +72,7 @@ namespace MovieApp {
                             movieList.Add(new Movie(title, year, actors, certification, rating, length, genres, director));
                         }
                 }
-                i++;
+            
                 
             }
 

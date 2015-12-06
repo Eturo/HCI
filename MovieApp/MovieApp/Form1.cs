@@ -7,12 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml.Linq;
 
 namespace MovieApp {
     public partial class Form1 : Form {
+        Point? clickPosition = null;
+        ToolTip tooltip = new ToolTip();
         public Form1() {
             InitializeComponent();
+            this.chart1.MouseClick += new MouseEventHandler(this.chart1_MouseClick);
+            
         }
 
         private void button1_Click(object sender, EventArgs e) {
@@ -33,14 +38,14 @@ namespace MovieApp {
             int directorVal = trackBar3.Value+64;
 
             string director = Convert.ToChar(directorVal).ToString();
-            List<string> cert = new List<string>(); //get from checkboxes
+            List<string> certs = getCerts();
 
             List<Movie> titleSearch = Util.searchByTitle(allMovies, title);
             List<Movie> actorSearch = Util.searchByTitle(allMovies, actor);
             List<Movie> directorSearch = Util.searchByTitle(allMovies, director);
 
-            List<Movie> searchedMovies = titleSearch; //just for testing
-            //List<Movie> searchedMovies = Util.getFinalList(titleSearch.Concat(actorSearch.Concat(directorSearch)).ToList(), genre);
+            //List<Movie> searchedMovies = titleSearch; //just for testing
+            List<Movie> searchedMovies = Util.getFinalList(titleSearch.Concat(actorSearch.Concat(directorSearch)).ToList(), "Action");
             // End of Search
 
             // Generate ScatterPlot
@@ -55,6 +60,7 @@ namespace MovieApp {
                 if (searchedMovies[i].genres[0] == "Action"){
                     point = this.chart1.Series["Action"].Points.AddXY(Int32.Parse(searchedMovies[i].year), Int32.Parse(searchedMovies[i].rating));
                     this.chart1.Series["Action"].Points[point].ToolTip = searchedMovies[i].title;
+                    this.chart1.Series["Action"].Points[point].Name = searchedMovies[i].title;
                 }
 
                 if (searchedMovies[i].genres[0] == "Adventure")
@@ -127,6 +133,7 @@ namespace MovieApp {
                 {
                     point = this.chart1.Series["Thriller"].Points.AddXY(Int32.Parse(searchedMovies[i].year), Int32.Parse(searchedMovies[i].rating));
                     this.chart1.Series["Thriller"].Points[point].ToolTip = searchedMovies[i].title;
+                    this.chart1.Series["Thriller"].Points[point].Name = searchedMovies[i].title;
                 }
             }
             //End of Generate ScatterPlot
@@ -137,13 +144,36 @@ namespace MovieApp {
 
         }
 
+       /* void chart1_MouseClick(object sender, MouseEventArgs e) {
+            var pos = e.Location;
+            clickPosition = pos;
+            var results = this.chart1.HitTest(pos.X, pos.Y, false,
+                                         ChartElementType.PlottingArea);
+            foreach (var result in results) {
+                if (result.ChartElementType == ChartElementType.PlottingArea) {
+                    var xVal = result.ChartArea.AxisX.PixelPositionToValue(pos.X);
+                    var yVal = result.ChartArea.AxisY.PixelPositionToValue(pos.Y);
 
-        //public void showAllInListBox() {
-        //    List<Movie> movies = Util.getAllMovies();
-        //    for(int i = 0; i < movies.Count; i++) {
-        //        listBox1.Items.Add(movies[i]);
-        //    }
-        //    listBox1.EndUpdate();
-        //}
+            //        var dataPoint = chart1.Series["Action"].Points.FindAllByValue("D");
+                }
+            }
+        }*/
+
+        private List<string> getCerts() {
+            List<string> certs = new List<string>();
+            if (checkBox1.Checked)
+                certs.Add(checkBox1.Text);
+            if (checkBox2.Checked)
+                certs.Add(checkBox2.Text);
+            if (checkBox3.Checked)
+                certs.Add(checkBox3.Text);
+            if (checkBox4.Checked)
+                certs.Add(checkBox4.Text);
+            return certs;
+
+        }
+
+
+      
     }
 }
