@@ -54,7 +54,7 @@ namespace MovieApp {
                     new XElement("rating", ratingText.Text)));
             }
             doc.Save("Resources/movies.xml");
-            Util.updateList();
+            Util.updateMovieList();
             this.Close();
         }
         public void edit(string title,string genre,string rating,string certification,string length, string actor, string director, string year) {

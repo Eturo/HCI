@@ -12,7 +12,6 @@ namespace MovieApp {
     public partial class WatchList : Form {
         public WatchList() {
             InitializeComponent();
-            InitializeComponent();
             listView1.Columns.Add("Title", 100);
             listView1.Columns.Add("Genre", 100);
             listView1.Columns.Add("IMDB Rating", 50);
@@ -30,7 +29,7 @@ namespace MovieApp {
         }
 
         private void loadIntoList() {
-            List<Movie> movies = Util.getAllMovies();
+            List<Movie> movies = Util.getAllMovies("Resources/watchlist.xml");
             List<ListViewItem> items = new List<ListViewItem>();
             for (int i = 0; i < movies.Count; i++) {
                 string[] itemToAdd = {movies[i].title,movies[i].genres[0],movies[i].rating,movies[i].certification,movies[i].length,
@@ -40,5 +39,15 @@ namespace MovieApp {
             listView1.Items.AddRange(items.ToArray());
             listView1.View = View.Details;
         }
+
+        private void WatchList_Load(object sender, EventArgs e) {
+            loadIntoList();
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            add();
+        }
+
+        private void add()
     }
 }

@@ -30,7 +30,7 @@ namespace MovieApp {
         }
 
         private void loadIntoList() {
-            List<Movie> movies = Util.getAllMovies();
+            List<Movie> movies = Util.getAllMovies("Resources/movies.xml");
             List<ListViewItem> items = new List<ListViewItem>();
             for (int i = 0; i < movies.Count; i++) {
                 string[] itemToAdd = {movies[i].title,movies[i].genres[0],movies[i].rating,movies[i].certification,movies[i].length,
@@ -51,7 +51,7 @@ namespace MovieApp {
                 element.ParentNode.RemoveChild(element);
                 doc.Save("Resources/movies.xml");
             }
-            Util.updateList();
+            Util.updateMovieList();
             listView1.SelectedItems[0].Remove();
         }
 

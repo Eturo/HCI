@@ -16,7 +16,7 @@ namespace MovieApp {
         ToolTip tooltip = new ToolTip();
         public Form1() {
             InitializeComponent();
-            this.chart1.MouseClick += new MouseEventHandler(this.chart1_MouseClick);
+      //      this.chart1.MouseClick += new MouseEventHandler(this.chart1_MouseClick);
             
         }
 
@@ -28,7 +28,7 @@ namespace MovieApp {
             //MessageBox.Show("List count is:" + listBox1.Items.Count);
 
             // Search(gets list of searchedMovies)
-            List<Movie> allMovies = Util.getAllMovies();
+            List<Movie> allMovies = Util.getAllMovies("Resources/movies.xml");
 
             int titleVal = (trackBar1.Value+64);
             string title = Convert.ToChar(titleVal).ToString();
@@ -173,7 +173,9 @@ namespace MovieApp {
 
         }
 
-
-      
+        private void button2_Click(object sender, EventArgs e) {
+            WatchList wl = new WatchList();
+            wl.Show();
+        }
     }
 }

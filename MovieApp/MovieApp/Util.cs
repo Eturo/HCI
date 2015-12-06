@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml;
 
 namespace MovieApp {
     public static class Util {
-        public static List<Movie> getAllMovies() {
-            XmlTextReader reader = new XmlTextReader("Resources/movies.xml");
+        public static List<Movie> getAllMovies(string filePath) {
+            XmlTextReader reader = new XmlTextReader(filePath);
             XmlNodeType type;
             List<Movie> movieList = new List<Movie>();
             List<string> genres = new List<string>();
@@ -19,61 +20,64 @@ namespace MovieApp {
             string rating = "";
             string length = "";
             string director = "";
+            try {
+                while (reader.Read()) {
+                    type = reader.NodeType;
+                    if (type == XmlNodeType.Element) {
+                        switch (reader.Name) {
 
-            while (reader.Read()) {
-                type = reader.NodeType;
-                if (type == XmlNodeType.Element) {
-                    switch (reader.Name) {
+                            case "title":
+                                reader.Read();
+                                title = reader.Value;
 
-                        case "title":
-                            reader.Read();
-                            title = reader.Value;
-                           
-                            genres = new List<string>();
-                            actors = new List<string>();
-                            break;
+                                genres = new List<string>();
+                                actors = new List<string>();
+                                break;
 
-                        case "year":
-                            reader.Read();
-                            year = reader.Value;
-                            break;
+                            case "year":
+                                reader.Read();
+                                year = reader.Value;
+                                break;
 
-                        case "actor":
-                            reader.Read();
-                            actors.Add(reader.Value);
-                            break;
+                            case "actor":
+                                reader.Read();
+                                actors.Add(reader.Value);
+                                break;
 
-                        case "certification":
-                            reader.Read();
-                            certification = reader.Value;
-                            break;
+                            case "certification":
+                                reader.Read();
+                                certification = reader.Value;
+                                break;
 
-                        case "rating":
-                            reader.Read();
-                            rating = reader.Value;
-                            break;
+                            case "rating":
+                                reader.Read();
+                                rating = reader.Value;
+                                break;
 
-                        case "length":
-                            reader.Read();
-                            length = reader.Value;
-                            break;
+                            case "length":
+                                reader.Read();
+                                length = reader.Value;
+                                break;
 
-                        case "genre":
-                            reader.Read();
-                            genres.Add(reader.Value);
-                            break;
+                            case "genre":
+                                reader.Read();
+                                genres.Add(reader.Value);
+                                break;
 
-                        case "director":
-                            reader.Read();
-                            director = reader.Value;
-                            break;
-                    }
-                        if(reader.Name== "movie" && title != "") {
+                            case "director":
+                                reader.Read();
+                                director = reader.Value;
+                                break;
+                        }
+                        if (reader.Name == "movie" && title != "") {
                             movieList.Add(new Movie(title, year, actors, certification, rating, length, genres, director));
                         }
+                    }
+
+
                 }
-            
-                
+            }catch(XmlException e) {
+                MessageBox.Show(e.ToString());
             }
 
             reader.Close();
@@ -130,8 +134,8 @@ namespace MovieApp {
             return result;
         }
 
-        public static void updateList() {
-            getAllMovies();
+        public static void updateMovieList() {
+            getAllMovies("Resources/movies.xml");
         }
 
         public static List<Movie> getFinalList(List<Movie> combinedMovies, string genre) {
@@ -150,8 +154,21 @@ namespace MovieApp {
 
         }
 
+        public static List<Movie> getWatchList() {
+            List<Movie> watchList = getAllMovies("Resources/watchlist.xml");
+            return watchList;
+        }
+
+        public static void updateWatchList() {
+            getAllMovies("Resources/watchlist.xml");
+        }
+
+
+
+        }
+
     }
-}
+
 
 
 
