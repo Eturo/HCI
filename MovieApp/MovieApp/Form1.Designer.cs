@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series25 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series26 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series27 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series28 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series29 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series30 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series31 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series32 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series33 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series34 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series35 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series36 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button1 = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.trackBar3 = new System.Windows.Forms.TrackBar();
@@ -73,6 +73,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.label9 = new System.Windows.Forms.Label();
+            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.checkBox16 = new System.Windows.Forms.CheckBox();
+            this.checkBox17 = new System.Windows.Forms.CheckBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,7 +88,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(7, 611);
+            this.button1.Location = new System.Drawing.Point(-2, 572);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -185,91 +191,91 @@
             this.pictureBox1.InitialImage = global::MovieApp.Properties.Resources.BELCover;
             this.pictureBox1.Location = new System.Drawing.Point(409, 23);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(479, 597);
+            this.pictureBox1.Size = new System.Drawing.Size(479, 537);
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(409, 12);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(396, 12);
             this.chart1.Name = "chart1";
-            series25.ChartArea = "ChartArea1";
-            series25.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series25.Legend = "Legend1";
-            series25.MarkerSize = 15;
-            series25.Name = "Action";
-            series26.ChartArea = "ChartArea1";
-            series26.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series26.Legend = "Legend1";
-            series26.MarkerSize = 15;
-            series26.Name = "Adventure";
-            series27.ChartArea = "ChartArea1";
-            series27.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series27.Legend = "Legend1";
-            series27.MarkerSize = 15;
-            series27.Name = "Romance";
-            series28.ChartArea = "ChartArea1";
-            series28.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series28.Legend = "Legend1";
-            series28.MarkerSize = 15;
-            series28.Name = "Thriller";
-            series29.ChartArea = "ChartArea1";
-            series29.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series29.Legend = "Legend1";
-            series29.MarkerSize = 15;
-            series29.Name = "Mystery";
-            series30.ChartArea = "ChartArea1";
-            series30.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series30.Legend = "Legend1";
-            series30.MarkerSize = 15;
-            series30.Name = "Crime";
-            series31.ChartArea = "ChartArea1";
-            series31.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series31.Legend = "Legend1";
-            series31.MarkerSize = 15;
-            series31.Name = "Comedy";
-            series32.ChartArea = "ChartArea1";
-            series32.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series32.Legend = "Legend1";
-            series32.MarkerSize = 15;
-            series32.Name = "Western";
-            series33.ChartArea = "ChartArea1";
-            series33.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series33.Legend = "Legend1";
-            series33.MarkerSize = 15;
-            series33.Name = "Sci-Fi";
-            series34.ChartArea = "ChartArea1";
-            series34.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series34.Legend = "Legend1";
-            series34.MarkerSize = 15;
-            series34.Name = "Animation";
-            series35.ChartArea = "ChartArea1";
-            series35.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series35.Legend = "Legend1";
-            series35.MarkerSize = 15;
-            series35.Name = "Drama";
-            series36.ChartArea = "ChartArea1";
-            series36.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series36.Legend = "Legend1";
-            series36.MarkerSize = 15;
-            series36.Name = "War";
-            this.chart1.Series.Add(series25);
-            this.chart1.Series.Add(series26);
-            this.chart1.Series.Add(series27);
-            this.chart1.Series.Add(series28);
-            this.chart1.Series.Add(series29);
-            this.chart1.Series.Add(series30);
-            this.chart1.Series.Add(series31);
-            this.chart1.Series.Add(series32);
-            this.chart1.Series.Add(series33);
-            this.chart1.Series.Add(series34);
-            this.chart1.Series.Add(series35);
-            this.chart1.Series.Add(series36);
-            this.chart1.Size = new System.Drawing.Size(850, 548);
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series13.Legend = "Legend1";
+            series13.MarkerSize = 15;
+            series13.Name = "Action";
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series14.Legend = "Legend1";
+            series14.MarkerSize = 15;
+            series14.Name = "Adventure";
+            series15.ChartArea = "ChartArea1";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series15.Legend = "Legend1";
+            series15.MarkerSize = 15;
+            series15.Name = "Romance";
+            series16.ChartArea = "ChartArea1";
+            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series16.Legend = "Legend1";
+            series16.MarkerSize = 15;
+            series16.Name = "Thriller";
+            series17.ChartArea = "ChartArea1";
+            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series17.Legend = "Legend1";
+            series17.MarkerSize = 15;
+            series17.Name = "Mystery";
+            series18.ChartArea = "ChartArea1";
+            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series18.Legend = "Legend1";
+            series18.MarkerSize = 15;
+            series18.Name = "Crime";
+            series19.ChartArea = "ChartArea1";
+            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series19.Legend = "Legend1";
+            series19.MarkerSize = 15;
+            series19.Name = "Comedy";
+            series20.ChartArea = "ChartArea1";
+            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series20.Legend = "Legend1";
+            series20.MarkerSize = 15;
+            series20.Name = "Western";
+            series21.ChartArea = "ChartArea1";
+            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series21.Legend = "Legend1";
+            series21.MarkerSize = 15;
+            series21.Name = "Sci-Fi";
+            series22.ChartArea = "ChartArea1";
+            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series22.Legend = "Legend1";
+            series22.MarkerSize = 15;
+            series22.Name = "Animation";
+            series23.ChartArea = "ChartArea1";
+            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series23.Legend = "Legend1";
+            series23.MarkerSize = 15;
+            series23.Name = "Drama";
+            series24.ChartArea = "ChartArea1";
+            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series24.Legend = "Legend1";
+            series24.MarkerSize = 15;
+            series24.Name = "War";
+            this.chart1.Series.Add(series13);
+            this.chart1.Series.Add(series14);
+            this.chart1.Series.Add(series15);
+            this.chart1.Series.Add(series16);
+            this.chart1.Series.Add(series17);
+            this.chart1.Series.Add(series18);
+            this.chart1.Series.Add(series19);
+            this.chart1.Series.Add(series20);
+            this.chart1.Series.Add(series21);
+            this.chart1.Series.Add(series22);
+            this.chart1.Series.Add(series23);
+            this.chart1.Series.Add(series24);
+            this.chart1.Size = new System.Drawing.Size(641, 554);
             this.chart1.TabIndex = 13;
             this.chart1.Text = "chart1";
             this.chart1.Visible = false;
@@ -287,7 +293,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 384);
+            this.label6.Location = new System.Drawing.Point(12, 383);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 13);
             this.label6.TabIndex = 15;
@@ -296,86 +302,86 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(20, 418);
+            this.checkBox5.Location = new System.Drawing.Point(17, 417);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(80, 17);
+            this.checkBox5.Size = new System.Drawing.Size(56, 17);
             this.checkBox5.TabIndex = 16;
-            this.checkBox5.Text = "checkBox5";
+            this.checkBox5.Text = "Action";
             this.checkBox5.UseVisualStyleBackColor = true;
             // 
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(106, 418);
+            this.checkBox6.Location = new System.Drawing.Point(103, 417);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(80, 17);
+            this.checkBox6.Size = new System.Drawing.Size(75, 17);
             this.checkBox6.TabIndex = 17;
-            this.checkBox6.Text = "checkBox6";
+            this.checkBox6.Text = "Adventure";
             this.checkBox6.UseVisualStyleBackColor = true;
             // 
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(20, 457);
+            this.checkBox7.Location = new System.Drawing.Point(17, 456);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(80, 17);
+            this.checkBox7.Size = new System.Drawing.Size(52, 17);
             this.checkBox7.TabIndex = 18;
-            this.checkBox7.Text = "checkBox7";
+            this.checkBox7.Text = "Crime";
             this.checkBox7.UseVisualStyleBackColor = true;
             // 
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(106, 457);
+            this.checkBox8.Location = new System.Drawing.Point(103, 456);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(80, 17);
+            this.checkBox8.Size = new System.Drawing.Size(64, 17);
             this.checkBox8.TabIndex = 19;
-            this.checkBox8.Text = "checkBox8";
+            this.checkBox8.Text = "Comedy";
             this.checkBox8.UseVisualStyleBackColor = true;
             // 
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(20, 495);
+            this.checkBox9.Location = new System.Drawing.Point(184, 456);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(80, 17);
+            this.checkBox9.Size = new System.Drawing.Size(57, 17);
             this.checkBox9.TabIndex = 20;
-            this.checkBox9.Text = "checkBox9";
+            this.checkBox9.Text = "Drama";
             this.checkBox9.UseVisualStyleBackColor = true;
             // 
             // checkBox10
             // 
             this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(106, 495);
+            this.checkBox10.Location = new System.Drawing.Point(184, 417);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(86, 17);
+            this.checkBox10.Size = new System.Drawing.Size(72, 17);
             this.checkBox10.TabIndex = 21;
-            this.checkBox10.Text = "checkBox10";
+            this.checkBox10.Text = "Animation";
             this.checkBox10.UseVisualStyleBackColor = true;
             // 
             // checkBox11
             // 
             this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(20, 527);
+            this.checkBox11.Location = new System.Drawing.Point(17, 488);
             this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(86, 17);
+            this.checkBox11.Size = new System.Drawing.Size(62, 17);
             this.checkBox11.TabIndex = 22;
-            this.checkBox11.Text = "checkBox11";
+            this.checkBox11.Text = "Mystery";
             this.checkBox11.UseVisualStyleBackColor = true;
             // 
             // checkBox12
             // 
             this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(106, 527);
+            this.checkBox12.Location = new System.Drawing.Point(103, 488);
             this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(86, 17);
+            this.checkBox12.Size = new System.Drawing.Size(72, 17);
             this.checkBox12.TabIndex = 23;
-            this.checkBox12.Text = "checkBox12";
+            this.checkBox12.Text = "Romance";
             this.checkBox12.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(51, 548);
+            this.button2.Location = new System.Drawing.Point(1130, 572);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 29);
             this.button2.TabIndex = 24;
@@ -421,12 +427,74 @@
             this.label9.TabIndex = 38;
             this.label9.Text = " ALL A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
             // 
+            // checkBox13
+            // 
+            this.checkBox13.AutoSize = true;
+            this.checkBox13.Location = new System.Drawing.Point(184, 488);
+            this.checkBox13.Name = "checkBox13";
+            this.checkBox13.Size = new System.Drawing.Size(52, 17);
+            this.checkBox13.TabIndex = 39;
+            this.checkBox13.Text = "Sci-Fi";
+            this.checkBox13.UseVisualStyleBackColor = true;
+            // 
+            // checkBox14
+            // 
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.Location = new System.Drawing.Point(184, 524);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(46, 17);
+            this.checkBox14.TabIndex = 40;
+            this.checkBox14.Text = "War";
+            this.checkBox14.UseVisualStyleBackColor = true;
+            // 
+            // checkBox16
+            // 
+            this.checkBox16.AutoSize = true;
+            this.checkBox16.Location = new System.Drawing.Point(103, 524);
+            this.checkBox16.Name = "checkBox16";
+            this.checkBox16.Size = new System.Drawing.Size(66, 17);
+            this.checkBox16.TabIndex = 42;
+            this.checkBox16.Text = "Western";
+            this.checkBox16.UseVisualStyleBackColor = true;
+            // 
+            // checkBox17
+            // 
+            this.checkBox17.AutoSize = true;
+            this.checkBox17.Location = new System.Drawing.Point(15, 524);
+            this.checkBox17.Name = "checkBox17";
+            this.checkBox17.Size = new System.Drawing.Size(57, 17);
+            this.checkBox17.TabIndex = 43;
+            this.checkBox17.Text = "Thriller";
+            this.checkBox17.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(1103, 94);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(161, 95);
+            this.listBox1.TabIndex = 44;
+            // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(1081, 244);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(124, 85);
+            this.listView1.TabIndex = 45;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1277, 708);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.checkBox17);
+            this.Controls.Add(this.checkBox16);
+            this.Controls.Add(this.checkBox14);
+            this.Controls.Add(this.checkBox13);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -501,6 +569,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TrackBar trackBar2;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.CheckBox checkBox16;
+        private System.Windows.Forms.CheckBox checkBox17;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListView listView1;
     }
 }
 

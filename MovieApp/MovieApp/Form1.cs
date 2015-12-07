@@ -31,21 +31,19 @@ namespace MovieApp {
             List<Movie> allMovies = Util.getAllMovies("Resources/movies.xml");
 
             int titleVal = (trackBar1.Value+64);
-            string title = Convert.ToChar(titleVal).ToString();
+            char title = Convert.ToChar(titleVal);
 
-            int actorVal = trackBar2.Value+64;
-            string actor = Convert.ToChar(actorVal).ToString();
-            int directorVal = trackBar3.Value+64;
+            int actorVal = trackBar3.Value+64;
+            char actor = Convert.ToChar(actorVal);
 
-            string director = Convert.ToChar(directorVal).ToString();
+            int directorVal = trackBar2.Value+64;
+            char director = Convert.ToChar(directorVal);
             List<string> certs = getCerts();
 
-            List<Movie> titleSearch = Util.searchByTitle(allMovies, title);
-            List<Movie> actorSearch = Util.searchByTitle(allMovies, actor);
-            List<Movie> directorSearch = Util.searchByTitle(allMovies, director);
+            List<Movie> searchMovies = Util.search(allMovies, title, actor, director);
 
             //List<Movie> searchedMovies = titleSearch; //just for testing
-            List<Movie> searchedMovies = Util.getFinalList(titleSearch.Concat(actorSearch.Concat(directorSearch)).ToList(), "Action");
+            List<Movie> searchedMovies = Util.getFinalList(searchMovies, "Crime");
             // End of Search
 
             // Generate ScatterPlot
@@ -53,6 +51,8 @@ namespace MovieApp {
             chart1.ChartAreas[0].AxisX.Minimum = 1920;
             chart1.ChartAreas[0].AxisX.Maximum = 2020;
             chart1.ChartAreas[0].AxisX.Interval = 20;
+            clearChart();
+            listBox1.Items.Clear();
 
             int point;
             for (int i=0; i<searchedMovies.Count; i++)
@@ -138,6 +138,24 @@ namespace MovieApp {
             }
             //End of Generate ScatterPlot
 
+            for (int i = 0; i < searchedMovies.Count; i++) {
+                listBox1.Items.Add(searchedMovies[i]);
+            }
+
+            //End of Populate List Box
+
+            //Generate ListView
+            this.listView1.View = View.Details;
+            this.listView1.Columns.Add("Director", 80);
+            this.listView1.Columns.Add("Actors", 80);
+            this.listView1.Columns.Add("Genres", 80);
+            this.listView1.Columns.Add("Rating", 80);
+            this.listView1.Columns.Add("Year Made", 80);
+            this.listView1.Columns.Add("Length", 80);
+            this.listView1.Columns.Add("Certification", 80);
+            //End of Generate ListView
+            //End of Generate ScatterPlot
+
         }
 
         private void Form1_Load(object sender, EventArgs e) {
@@ -193,5 +211,55 @@ namespace MovieApp {
         private void label15_Click(object sender, EventArgs e) {
 
         }
+
+        private void clearChart() {
+            //Clear Chart
+            if (chart1.Series.Contains(chart1.Series["Action"])) {
+                this.chart1.Series["Action"].Points.Clear();
+            }
+            if (chart1.Series.Contains(chart1.Series["Adventure"])) {
+                this.chart1.Series["Adventure"].Points.Clear();
+            }
+            if (chart1.Series.Contains(chart1.Series["Romance"])) {
+                this.chart1.Series["Romance"].Points.Clear();
+            }
+            if (chart1.Series.Contains(chart1.Series["War"])) {
+                this.chart1.Series["War"].Points.Clear();
+            }
+            if (chart1.Series.Contains(chart1.Series["Drama"])) {
+                this.chart1.Series["Drama"].Points.Clear();
+            }
+            if (chart1.Series.Contains(chart1.Series["Animation"])) {
+                this.chart1.Series["Animation"].Points.Clear();
+            }
+            if (chart1.Series.Contains(chart1.Series["Western"])) {
+                this.chart1.Series["Western"].Points.Clear();
+            }
+            if (chart1.Series.Contains(chart1.Series["Comedy"])) {
+                this.chart1.Series["Comedy"].Points.Clear();
+            }
+            if (chart1.Series.Contains(chart1.Series["Thriller"])) {
+                this.chart1.Series["Thriller"].Points.Clear();
+            }
+            if (chart1.Series.Contains(chart1.Series["Crime"])) {
+                this.chart1.Series["Crime"].Points.Clear();
+            }
+            if (chart1.Series.Contains(chart1.Series["Mystery"])) {
+                this.chart1.Series["Mystery"].Points.Clear();
+            }
+            if (chart1.Series.Contains(chart1.Series["Sci-Fi"])) {
+                this.chart1.Series["Sci-Fi"].Points.Clear();
+            }
+            //End of clear chart
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e) {
+            Movie sm = (Movie)listBox1.SelectedItem;
+            var item = new ListViewItem(new[] { sm.director, sm.actors[0], sm.genres[0], sm.rating, sm.year, sm.length, sm.certification });
+            listView1.Items.Clear();
+            listView1.Items.Add(item);
+        }
+
+
     }
 }

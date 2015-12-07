@@ -48,6 +48,6 @@ namespace MovieApp {
             add();
         }
 
-        private void add()
+        private void add() { }
     }
 }

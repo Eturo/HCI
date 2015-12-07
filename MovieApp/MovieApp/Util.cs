@@ -84,55 +84,41 @@ namespace MovieApp {
             return movieList;
         }
 
-
-        public static List<Movie> searchByTitle(List<Movie> movies, string title) {
+        public static List<Movie> search(List<Movie> movies, char title, char actor, char director) {
             List<Movie> result = new List<Movie>();
-            for (int i = 0; i < movies.Count; i++) {
-                if (title.Length > 1) {
-                    result = movies;
-                }
-                else if (movies[i].title[0] == title[0]) {
-                    result.Add(movies[i]);
-                }
-
-            }
-
-            return result;
-
-        }
-
-        public static List<Movie> searchByDirector(List<Movie> movies, string director) {
-            List<Movie> result = new List<Movie>();
-            for (int i = 0; i < movies.Count; i++) {
-                if (director.Length > 1) {
-                    result = movies;
-                }
-                else if (movies[i].director[0] == director[0]) {
-                    result.Add(movies[i]);
+            int movieCount = movies.Count;
+            //get movies with title
+            if (title == '@')
+                result = movies;
+            else {
+                for (int i = 0; i < movieCount; i++) {
+                    if (movies[i].title[0] == title) {
+                        result.Add(movies[i]);
+                    }
                 }
             }
-
-            return result;
-        }
-
-        public static List<Movie> searchByActor(List<Movie> movies, string actor) {
-            List<Movie> result = new List<Movie>();
-            for (int i = 0; i < movies.Count; i++) {
-                if (actor.Length > 0) {
-                    result = movies;
+            if (director != '@') {
+                movieCount = result.Count;
+                for (int i = 0; i < movieCount; i++) {
+                    if (result[i].director[0] == director) {
+                        result.Add(result[i]);
+                    }
                 }
-                else {
-                    for (int j = 0; j < movies[i].actors.Count; j++) {
-                        if (movies[i].actors[j][0] == actor[0]) {
-                            result.Add(movies[i]);
+            }
+            if (actor != '@') {
+                movieCount = result.Count;
+                for (int i = 0; i < movieCount; i++) {
+                    for (int j = 0; j < result[i].actors.Count; j++) {
+                        if (result[i].actors[j][0] == actor) {
+                            result.Add(result[i]);
                             break;
                         }
                     }
                 }
             }
-
             return result;
         }
+
 
         public static void updateMovieList() {
             getAllMovies("Resources/movies.xml");
