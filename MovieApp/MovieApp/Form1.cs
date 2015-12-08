@@ -16,12 +16,17 @@ namespace MovieApp {
         ToolTip tooltip = new ToolTip();
         public Form1() {
             InitializeComponent();
-      //      this.chart1.MouseClick += new MouseEventHandler(this.chart1_MouseClick);
-            
+            generateListView1();
+            //      this.chart1.MouseClick += new MouseEventHandler(this.chart1_MouseClick);
+
         }
 
         private void button1_Click(object sender, EventArgs e) {
             pictureBox1.Visible = false;
+            chart1.Visible = true;
+            listBox1.Visible = true;
+            listView1.Visible = true;
+            button3.Visible = true;
             //AdminPage admin = new AdminPage();
             //admin.Show();
             //showAllInListBox();
@@ -41,13 +46,13 @@ namespace MovieApp {
             List<string> certs = getCerts();
 
             List<Movie> searchMovies = Util.search(allMovies, title, actor, director);
-
+            List<string> genres = getGenreList();
             //List<Movie> searchedMovies = titleSearch; //just for testing
-            List<Movie> searchedMovies = Util.getFinalList(searchMovies, "Crime");
+            List<Movie> searchedMovies = Util.getFinalList(searchMovies, genres,certs);
             // End of Search
 
             // Generate ScatterPlot
-            chart1.Visible = true;
+
             chart1.ChartAreas[0].AxisX.Minimum = 1920;
             chart1.ChartAreas[0].AxisX.Maximum = 2020;
             chart1.ChartAreas[0].AxisX.Interval = 20;
@@ -69,11 +74,6 @@ namespace MovieApp {
                     this.chart1.Series["Adventure"].Points[point].ToolTip = searchedMovies[i].title;
                 }
 
-                if (searchedMovies[i].genres[0] == "History")
-                {
-                    point = this.chart1.Series["History"].Points.AddXY(Int32.Parse(searchedMovies[i].year), Int32.Parse(searchedMovies[i].rating));
-                    this.chart1.Series["History"].Points[point].ToolTip = searchedMovies[i].title;
-                }
 
                 if (searchedMovies[i].genres[0] == "Romance")
                 {
@@ -138,22 +138,12 @@ namespace MovieApp {
             }
             //End of Generate ScatterPlot
 
+            //Populate ListBox
             for (int i = 0; i < searchedMovies.Count; i++) {
                 listBox1.Items.Add(searchedMovies[i]);
             }
-
             //End of Populate List Box
 
-            //Generate ListView
-            this.listView1.View = View.Details;
-            this.listView1.Columns.Add("Director", 80);
-            this.listView1.Columns.Add("Actors", 80);
-            this.listView1.Columns.Add("Genres", 80);
-            this.listView1.Columns.Add("Rating", 80);
-            this.listView1.Columns.Add("Year Made", 80);
-            this.listView1.Columns.Add("Length", 80);
-            this.listView1.Columns.Add("Certification", 80);
-            //End of Generate ListView
             //End of Generate ScatterPlot
 
         }
@@ -195,21 +185,16 @@ namespace MovieApp {
             WatchList wl = new WatchList();
             wl.Show();
         }
-
-        private void label9_Click(object sender, EventArgs e) {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e) {
-
-        }
-
-        private void chart1_Click(object sender, EventArgs e) {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e) {
-
+        private void generateListView1()
+        {
+            this.listView1.View = View.Details;
+            this.listView1.Columns.Add("Director", 80);
+            this.listView1.Columns.Add("Actors", 80);
+            this.listView1.Columns.Add("Genres", 80);
+            this.listView1.Columns.Add("Rating", 80);
+            this.listView1.Columns.Add("Year Made", 80);
+            this.listView1.Columns.Add("Length", 80);
+            this.listView1.Columns.Add("Certification", 80);
         }
 
         private void clearChart() {
@@ -253,13 +238,85 @@ namespace MovieApp {
             //End of clear chart
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e) {
-            Movie sm = (Movie)listBox1.SelectedItem;
-            var item = new ListViewItem(new[] { sm.director, sm.actors[0], sm.genres[0], sm.rating, sm.year, sm.length, sm.certification });
-            listView1.Items.Clear();
-            listView1.Items.Add(item);
+        private List<string> getGenreList(){
+            List<string> genres = new List<string>();
+            if(checkBox5.Checked){
+                genres.Add(checkBox5.Text);
+            }
+            if(checkBox6.Checked){
+                genres.Add(checkBox6.Text);
+            }
+            if(checkBox7.Checked){
+                genres.Add(checkBox7.Text);
+            }
+            if(checkBox8.Checked){
+                genres.Add(checkBox8.Text);
+            }
+            if(checkBox9.Checked){
+                genres.Add(checkBox9.Text);
+            }
+            if(checkBox10.Checked){
+                genres.Add(checkBox10.Text);
+            }
+            if(checkBox11.Checked){
+                genres.Add(checkBox11.Text);
+            }
+            if(checkBox12.Checked){
+                genres.Add(checkBox12.Text);
+            }
+            if(checkBox13.Checked){
+                genres.Add(checkBox13.Text);
+            }
+            if(checkBox14.Checked){
+                genres.Add(checkBox14.Text);
+            }
+            if(checkBox17.Checked){
+                genres.Add(checkBox17.Text);
+            }
+            if(checkBox16.Checked){
+                genres.Add(checkBox16.Text);
+            }
+            return genres;
         }
 
 
+        
+        
+        
+        
+
+
+
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Movie sm = (Movie)listBox1.SelectedItem;
+            var item = new ListViewItem(new [] { sm.director, sm.actors[0], sm.genres[0], sm.rating, sm.year, sm.length, sm.certification });
+            listView1.Items.Clear();
+            listView1.Items.Add(item);
+            for(int i =1; i< sm.genres.Count;i++){
+                listView1.Items.Add(new ListViewItem(new[] { "", "", sm.genres[i],"","","",""}));
+            }
+        }
+
+        private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Movie sm = (Movie)listBox1.SelectedItem;
+            MoviePage mp = new MoviePage(sm);
+            mp.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Add (Movie)listBox1.SelectedItem to watchlist.xml
+            XElement xml = XElement.Load("Resources/watchlist.xml");
+            xml.Add(new XElement("movie",
+            new XElement("title", ),
+            new XElement("FirstName", firstName),
+            new XElement("LastName", lastName),
+            new XElement("Location", location)));
+            xml.Save(fileLocation);
+
+        }
     }
 }

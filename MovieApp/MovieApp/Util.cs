@@ -124,12 +124,30 @@ namespace MovieApp {
             getAllMovies("Resources/movies.xml");
         }
 
-        public static List<Movie> getFinalList(List<Movie> combinedMovies, string genre) {
+        public static List<Movie> getFinalList(List<Movie> combinedMovies, List<string> genres, List<string> certs) {
             List<Movie> final = combinedMovies.Distinct().ToList();
             List<Movie> movies = new List<Movie>();
-            for (int i = 0; i < final.Count; i++) {
-                if (final[i].genres.Contains(genre)) {
-                    movies.Add(final[i]);
+            bool ifGenre = false;
+            if(genres.Count > 0){
+                for (int i = 0; i < final.Count; i++) {
+                    ifGenre = false;
+                    for(int j =0;j< genres.Count && !ifGenre ; j++){
+                        if(final[i].genres.Contains(genres[j])){
+                            
+                            ifGenre = true;
+                        }
+                    }
+                    // add movie
+                    if (ifGenre && certs.Count < 1)
+                        movies.Add(final[i]);
+                    if(certs.Contains(final[i].certification) && ifGenre)
+                        movies.Add(final[i]);
+                }
+            }
+            else{
+                for(int i =0; i< final.Count ; i ++){
+                    if(certs.Count < 1 || (certs.Contains(final[i].certification)))
+                        movies.Add(final[i]);
                 }
             }
             return movies;
@@ -155,6 +173,17 @@ namespace MovieApp {
 
     }
 
-
+  IEnumerable<XElement> rows = root.Descendants("movie");
+                XElement = 
+                    new XElement("movie",
+                    new XElement("title", titleText.Text),
+                    new XElement("director", directorText.Text),
+                    new XElement("actor", actorText.Text),
+                    new XElement("length", lengthText.Text),
+                    new XElement("year", yearText.Text),
+                    new XElement("genre", genreBox.Text),
+                    new XElement("certification", certificationText.Text),
+                    new XElement("rating", ratingText.Text)));
+            }
 
 

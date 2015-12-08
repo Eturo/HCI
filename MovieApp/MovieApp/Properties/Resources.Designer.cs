@@ -71,6 +71,36 @@ namespace MovieApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BELCover1 {
+            get {
+                object obj = ResourceManager.GetObject("BELCover1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BELCover2 {
+            get {
+                object obj = ResourceManager.GetObject("BELCover2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap movieorganizertitle {
+            get {
+                object obj = ResourceManager.GetObject("movieorganizertitle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
         ///&lt;movielist xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns=&quot;http://www.cpandl.com&quot;&gt;
         ///&lt;movie&gt;
@@ -85,11 +115,21 @@ namespace MovieApp.Properties {
         ///	&lt;genre&gt;History&lt;/genre&gt;
         ///	&lt;genre&gt;Romance&lt;/genre&gt;
         ///	&lt;genre&gt;War&lt;/genre&gt;
-        ///	&lt;actor&gt;Ar [rest of string was truncated]&quot;;.
+        ///	&lt;actor&gt;Arturo de C  rdo [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string movies {
             get {
                 return ResourceManager.GetString("movies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vhsmovies {
+            get {
+                object obj = ResourceManager.GetObject("vhsmovies", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
